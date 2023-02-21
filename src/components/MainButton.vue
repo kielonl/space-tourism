@@ -8,14 +8,13 @@
 button {
   background: #ffffff;
   border-radius: 50%;
-  height: 20rem;
-  width: 20rem;
+  padding: 3em;
   outline: none;
   border: none;
   cursor: pointer;
   transition: all 300ms;
   &:hover {
-    outline: 5rem solid rgba(255, 255, 255, 10.36%);
+    outline: 3em solid rgba(255, 255, 255, 10.36%);
   }
   h4 {
     color: #0b0d17;
