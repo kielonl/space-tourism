@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <main id="home">
     <div class="desktop-header">
@@ -24,6 +22,8 @@
     </div>
   </main>
 </template>
+
+<script setup lang="ts"></script>
 
 <style scoped lang="scss">
 main {
