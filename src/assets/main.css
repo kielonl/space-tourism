@@ -74,6 +74,9 @@ h5 {
   .body-text {
     font-size: 16pt;
   }
+  h2 {
+    font-size: 80pt;
+  }
   h5 {
     font-size: 20pt;
   }
@@ -90,10 +93,16 @@ h5 {
   h1 {
     font-size: 80pt;
   }
+  h2 {
+    font-size: 56pt;
+  }
   h5 {
     font-size: 16pt;
   }
   h4 {
     font-size: 20pt;
+  }
+  .nav-text {
+    font-size: 14pt;
   }
 }
