@@ -39,6 +39,7 @@
     border-bottom: 1px solid #ffffff;
     transform: translateX(4%);
     z-index: 2;
+    opacity: 0.25;
   }
 
   nav {

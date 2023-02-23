@@ -154,7 +154,7 @@ const currentDestination = ref<"moon" | "mars" | "europa" | "titan">("moon");
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          margin: 2rem 0rem 0rem 0rem;
+          margin: 2rem 0rem 2rem 0rem;
           max-width: 30rem;
           .distance > div:nth-child(1),
           .travel-time > div:nth-child(1) {
@@ -193,6 +193,10 @@ const currentDestination = ref<"moon" | "mars" | "europa" | "titan">("moon");
 
 @media (max-width: 768px) {
   #destination {
+    height: fit-content;
+    overflow-y: scroll;
+    background-repeat: repeat;
+
     .destination-wrapper {
       .destination-body {
         display: flex;
