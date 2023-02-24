@@ -23,7 +23,7 @@ h5 {
 }
 
 .body-text {
-  font-size: 18pt;
+  font-size: 18px;
   line-height: 32pt;
   color: #d0d6f9;
 }
@@ -72,13 +72,20 @@ h5 {
 
 @media (max-width: 768px) {
   .body-text {
-    font-size: 16pt;
+    font-size: 16px;
+    line-height: 28px;
   }
   h2 {
     font-size: 80pt;
   }
+  h3 {
+    font-size: 40pt;
+  }
+  h4 {
+    font-size: 24pt;
+  }
   h5 {
-    font-size: 20pt;
+    font-size: 20px;
   }
   .nav-text {
     font-size: 16pt;
@@ -88,7 +95,7 @@ h5 {
 
 @media (max-width: 375px) {
   .body-text {
-    font-size: 15pt;
+    font-size: 15px;
   }
   h1 {
     font-size: 80pt;
@@ -96,8 +103,11 @@ h5 {
   h2 {
     font-size: 56pt;
   }
+  h3 {
+    font-size: 24pt;
+  }
   h5 {
-    font-size: 16pt;
+    font-size: 16px;
   }
   h4 {
     font-size: 20pt;
