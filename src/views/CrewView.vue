@@ -214,6 +214,12 @@ input[type="radio"] {
           padding: 0 6rem;
           text-align: center;
         }
+        .right-side {
+          img {
+            position: unset;
+            width: 270px;
+          }
+        }
       }
     }
   }
