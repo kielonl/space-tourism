@@ -3,15 +3,29 @@
     <img src="../assets/shared/logo.svg" alt="logo" />
     <span class="desktop-header--spacer"></span>
     <nav>
-      <a href="#" class="nav-text selected"
-        ><span class="nav-number">00</span> Home</a
+      <RouterLink
+        to="/"
+        class="nav-text"
+        :class="{ selected: currentRoute === 'home' }"
+        ><span class="nav-number">00</span> Home</RouterLink
       >
-      <a href="#" class="nav-text"
-        ><span class="nav-number">01</span> DESTINATION</a
+      <RouterLink
+        to="/destination"
+        class="nav-text"
+        :class="{ selected: currentRoute === 'destination' }"
+        ><span class="nav-number">01</span> DESTINATION</RouterLink
       >
-      <a href="#" class="nav-text"><span class="nav-number">02</span> CREW</a>
-      <a href="#" class="nav-text"
-        ><span class="nav-number">03</span> TECHNOLOGY</a
+      <RouterLink
+        to="/crew"
+        class="nav-text"
+        :class="{ selected: currentRoute === 'crew' }"
+        ><span class="nav-number">02</span> CREW</RouterLink
+      >
+      <RouterLink
+        to="/technology"
+        class="nav-text"
+        :class="{ selected: currentRoute === 'technology' }"
+        ><span class="nav-number">03</span> TECHNOLOGY</RouterLink
       >
     </nav>
     <img
@@ -22,7 +36,15 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+import { RouterLink } from "vue-router";
+
+const route = useRoute();
+const currentRoute = computed(() => route.name);
+console.log(currentRoute.value);
+</script>
 
 <style scoped lang="scss">
 .desktop-header--menu {
