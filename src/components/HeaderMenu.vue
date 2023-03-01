@@ -1,5 +1,10 @@
 <template>
   <div class="desktop-header--menu">
+    <MobileHeaderMenu
+      v-if="showMobileMenu"
+      :toggleMobileMenu="toggleMobileMenu"
+    />
+
     <img src="../assets/shared/logo.svg" alt="logo" />
     <span class="desktop-header--spacer"></span>
     <nav>
@@ -32,18 +37,25 @@
       src="../assets/shared/icon-hamburger.svg"
       alt="hamburger-menu"
       class="hamburger-menu"
+      @click="toggleMobileMenu"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import MobileHeaderMenu from "@/components/MobileHeaderMenu.vue";
+
+import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
 import { RouterLink } from "vue-router";
 
 const route = useRoute();
 const currentRoute = computed(() => route.name);
-console.log(currentRoute.value);
+const showMobileMenu = ref(false);
+
+const toggleMobileMenu = () => {
+  showMobileMenu.value = !showMobileMenu.value;
+};
 </script>
 
 <style scoped lang="scss">
