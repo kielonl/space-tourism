@@ -120,8 +120,8 @@ input[type="radio"] {
 }
 
 #crew {
-  background: url("src/assets/crew/background-crew-desktop.jpg") no-repeat
-    center center fixed;
+  background: url("../assets/crew/background-crew-desktop.jpg") no-repeat center
+    center fixed;
   background-size: cover;
   height: 100vh;
   overflow: hidden;
@@ -194,7 +194,7 @@ input[type="radio"] {
     margin-top: 2rem;
   }
   #crew {
-    background: url("src/assets/crew/background-crew-tablet.jpg") no-repeat
+    background: url("../assets/crew/background-crew-tablet.jpg") no-repeat
       center center fixed;
     .crew-wrapper {
       .crew-heading {
@@ -227,7 +227,7 @@ input[type="radio"] {
 
 @media (max-width: 375px) {
   #crew {
-    background: url("src/assets/crew/background-crew-mobile.jpg") no-repeat
+    background: url("../assets/crew/background-crew-mobile.jpg") no-repeat
       center center fixed;
     .crew-wrapper {
       .crew-heading--mobile {
