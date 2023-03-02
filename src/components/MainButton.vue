@@ -8,7 +8,8 @@
 button {
   background: #ffffff;
   border-radius: 50%;
-  padding: 5vmax;
+  padding: 5rem 5rem;
+  font-size: calc(1rem + 1vw);
   outline: none;
   border: none;
   cursor: pointer;

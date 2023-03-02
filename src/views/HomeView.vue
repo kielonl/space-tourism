@@ -33,17 +33,14 @@ import HeaderMenu from "@/components/HeaderMenu.vue";
   overflow: hidden;
 
   .desktop-body-wrapper {
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    padding: 6rem;
+    display: flex;
     .desktop-body--heading {
-      grid-area: 1 / 1 / 2 / 2;
       display: flex;
       flex-direction: column;
-      max-width: 40rem;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
       h1 {
         margin: 0;
         padding: 0;
@@ -51,14 +48,15 @@ import HeaderMenu from "@/components/HeaderMenu.vue";
       .sub-heading1 {
         color: #d0d6f9;
       }
+      .body-text {
+        max-width: 40rem;
+      }
     }
     .desktop-body-button-wrapper {
-      grid-area: 1 / 2 / 2 / 3;
-      button {
-        position: relative;
-        left: 50%;
-        top: 40%;
-      }
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
@@ -75,6 +73,12 @@ import HeaderMenu from "@/components/HeaderMenu.vue";
       align-items: center;
       padding: 0;
       text-align: center;
+      h1 {
+        font-size: 150px;
+      }
+      .body-text {
+        padding: 0 4rem;
+      }
 
       .desktop-body-button-wrapper {
         button {
