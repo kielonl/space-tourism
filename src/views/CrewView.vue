@@ -211,12 +211,12 @@ input[type="radio"] {
           transform: unset;
           justify-content: center;
           align-items: center;
-          padding: 0 6rem;
+          padding: 0 4rem;
           text-align: center;
         }
         .right-side {
           img {
-            position: unset;
+            position: absolute;
             width: 270px;
           }
         }
@@ -258,6 +258,8 @@ input[type="radio"] {
           margin: 0 2rem;
           img {
             position: unset;
+            height: 225px;
+            width: 170px;
           }
         }
 

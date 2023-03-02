@@ -8,25 +8,25 @@
         to="/"
         class="nav-text"
         :class="{ selected: currentRoute === 'home' }"
-        ><span class="nav-number">00</span> HOME</RouterLink
+        ><div><span class="nav-number">00</span> HOME</div></RouterLink
       >
       <RouterLink
         to="/destination"
         class="nav-text"
         :class="{ selected: currentRoute === 'destination' }"
-        ><span class="nav-number">01</span> DESTINATION</RouterLink
+        ><div><span class="nav-number">01</span> DESTINATION</div></RouterLink
       >
       <RouterLink
         to="/crew"
         class="nav-text"
         :class="{ selected: currentRoute === 'crew' }"
-        ><span class="nav-number">02</span> CREW</RouterLink
+        ><div><span class="nav-number">02</span> CREW</div></RouterLink
       >
       <RouterLink
         to="/technology"
         class="nav-text"
         :class="{ selected: currentRoute === 'technology' }"
-        ><span class="nav-number">03</span> TECHNOLOGY</RouterLink
+        ><div><span class="nav-number">03</span> TECHNOLOGY</div></RouterLink
       >
     </nav>
   </div>
@@ -56,8 +56,7 @@ const currentRoute = computed(() => route.name);
     position: absolute;
     top: 0;
     right: 0;
-    height: 100vh;
-    width: 70vw;
+    height: 100%;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40px);
     z-index: 2;
@@ -94,11 +93,15 @@ const currentRoute = computed(() => route.name);
       margin-top: 40%;
       margin-left: 2rem;
       gap: 1rem;
+      div {
+        padding-right: 2rem;
+      }
       .selected {
         border-right: 4px solid white;
       }
       .nav-number {
         font-weight: bold;
+        margin-right: 2rem;
       }
       font-weight: 100;
     }

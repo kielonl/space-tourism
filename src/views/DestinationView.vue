@@ -33,7 +33,7 @@
           <div class="body-text">
             {{ destinationInfo[currentDestination].bodyText }}
           </div>
-          <hr />
+
           <div class="planet-info">
             <div class="distance">
               <div class="sub-heading2">AVG. DISTANCE</div>
@@ -117,6 +117,9 @@ const currentDestination = ref<"moon" | "mars" | "europa" | "titan">("moon");
     .destination-heading {
       display: flex;
       flex-direction: row;
+      justify-content: center;
+      width: 40%;
+
       gap: 1rem;
       & > h5:nth-child(1) {
         color: white;
@@ -128,11 +131,10 @@ const currentDestination = ref<"moon" | "mars" | "europa" | "titan">("moon");
       }
     }
     .destination-body {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr;
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
       .left-side {
         grid-area: 1 / 1 / 2 / 2;
         display: grid;
@@ -198,6 +200,11 @@ const currentDestination = ref<"moon" | "mars" | "europa" | "titan">("moon");
     background-repeat: repeat;
 
     .destination-wrapper {
+      .destination-heading {
+        width: 100%;
+        justify-content: start;
+        margin-left: 5%;
+      }
       .destination-body {
         display: flex;
         flex-direction: column;
@@ -218,6 +225,13 @@ const currentDestination = ref<"moon" | "mars" | "europa" | "titan">("moon");
           .planet-info {
             justify-content: space-around;
             max-width: 40rem;
+          }
+          h2 {
+            font-size: 80px;
+          }
+          .body-text {
+            padding: 1rem;
+            border-bottom: 1px solid #383b4b;
           }
         }
       }
