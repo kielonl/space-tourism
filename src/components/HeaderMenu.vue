@@ -5,7 +5,7 @@
       :toggleMobileMenu="toggleMobileMenu"
     />
 
-    <img src="../assets/shared/logo.svg" alt="logo" />
+    <img src="https://diedieve.sirv.com/Images/logo.svg" alt="logo" />
     <span class="desktop-header--spacer"></span>
     <nav>
       <RouterLink
@@ -34,7 +34,7 @@
       >
     </nav>
     <img
-      src="../assets/shared/icon-hamburger.svg"
+      src="https://diedieve.sirv.com/Images/icon-hamburger.svg"
       alt="hamburger-menu"
       class="hamburger-menu"
       @click="toggleMobileMenu"

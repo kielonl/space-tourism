@@ -51,7 +51,7 @@
           <div
             class="technology-image--portrait"
             :style="{
-              background: `url(${technologyInfo[currentTechnology].image.portrait})`,
+              background: `url(${technologyInfo[currentTechnology].image.portrait}) no-repeat center center`,
               backgroundSize: 'cover',
             }"
           ></div>
@@ -72,14 +72,27 @@
 import HeaderMenu from "@/components/HeaderMenu.vue";
 import { ref } from "vue";
 
-const technologyInfo = {
+interface Technology {
+  [key: string]: {
+    name: string;
+    bodyText: string;
+    image: {
+      portrait: string;
+      landscape: string;
+    };
+  };
+}
+
+const technologyInfo: Technology = {
   launchVehicle: {
     name: "Launch Vehicle",
     bodyText:
       "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
     image: {
-      portrait: "src/assets/technology/image-launch-vehicle-portrait.jpg",
-      landscape: "src/assets/technology/image-launch-vehicle-landscape.jpg",
+      portrait:
+        "https://diedieve.sirv.com/Images/image-launch-vehicle-portrait.jpg",
+      landscape:
+        "https://diedieve.sirv.com/Images/image-launch-vehicle-landscape.jpg",
     },
   },
   spacePort: {
@@ -87,8 +100,9 @@ const technologyInfo = {
     bodyText:
       "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.",
     image: {
-      portrait: "src/assets/technology/image-spaceport-portrait.jpg",
-      landscape: "src/assets/technology/image-spaceport-landscape.jpg",
+      portrait: "https://diedieve.sirv.com/Images/image-spaceport-portrait.jpg",
+      landscape:
+        "https://diedieve.sirv.com/Images/image-spaceport-landscape.jpg",
     },
   },
   spaceCapsule: {
@@ -96,8 +110,10 @@ const technologyInfo = {
     bodyText:
       "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.",
     image: {
-      portrait: "src/assets/technology/image-space-capsule-portrait.jpg",
-      landscape: "src/assets/technology/image-space-capsule-landscape.jpg",
+      portrait:
+        "https://diedieve.sirv.com/Images/image-space-capsule-portrait.jpg",
+      landscape:
+        "https://diedieve.sirv.com/Images/image-space-capsule-landscape.jpg",
     },
   },
 };
@@ -144,7 +160,7 @@ const currentTechnology = ref<"launchVehicle" | "spacePort" | "spaceCapsule">(
 }
 
 #technology {
-  background: url("src/assets/technology/background-technology-desktop.jpg")
+  background: url("https://diedieve.sirv.com/Images/background-technology-desktop.jpg")
     no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
@@ -152,9 +168,10 @@ const currentTechnology = ref<"launchVehicle" | "spacePort" | "spaceCapsule">(
   .technology-wrapper {
     .technology-heading {
       display: flex;
+      width: 40%;
+      justify-content: center;
       flex-direction: row;
       gap: 1rem;
-      width: fit-content;
       & > h5 {
         font-size: 28px;
       }
@@ -175,8 +192,9 @@ const currentTechnology = ref<"launchVehicle" | "spacePort" | "spaceCapsule">(
       grid-row-gap: 0px;
       .left-side {
         z-index: 1;
-        transform: translateY(10rem);
+        transform: translateY(5rem);
         margin-bottom: 20rem;
+
         .description {
           .nav-text {
             color: #d0d6f9;
@@ -185,7 +203,9 @@ const currentTechnology = ref<"launchVehicle" | "spacePort" | "spaceCapsule">(
         .left-container {
           display: flex;
           flex-direction: row;
-          justify-content: space-evenly;
+          justify-content: center;
+          align-items: center;
+          gap: 5rem;
           .slider {
             display: flex;
             flex-direction: column;
@@ -206,7 +226,6 @@ const currentTechnology = ref<"launchVehicle" | "spacePort" | "spaceCapsule">(
         }
       }
       .right-side {
-        width: 100%;
         height: 100%;
         .technology-image--portrait {
           background-size: cover;
@@ -231,9 +250,12 @@ const currentTechnology = ref<"launchVehicle" | "spacePort" | "spaceCapsule">(
     }
   }
   #technology {
-    background: url("src/assets/technology/background-technology-tablet.jpg")
+    background: url("https://diedieve.sirv.com/Images/background-technology-tablet.jpg")
       no-repeat center center fixed;
     .technology-wrapper {
+      .technology-heading {
+        width: 100%;
+      }
       .technology-body {
         display: flex;
         flex-direction: column-reverse;
@@ -244,6 +266,7 @@ const currentTechnology = ref<"launchVehicle" | "spacePort" | "spaceCapsule">(
             flex-direction: column;
             align-items: center;
             text-align: center;
+            gap: 0;
             .slider {
               flex-direction: row;
               margin: 2rem 0;
@@ -253,7 +276,6 @@ const currentTechnology = ref<"launchVehicle" | "spacePort" | "spaceCapsule">(
         .right-side {
           .technology-image--landscape {
             display: block;
-            //background: url("src/assets/technology/image-launch-vehicle-landscape.jpg");
             background-position: center;
             height: 30vh;
           }
@@ -275,13 +297,14 @@ const currentTechnology = ref<"launchVehicle" | "spacePort" | "spaceCapsule">(
       }
     }
     #technology {
-      background: url("src/assets/technology/background-technology-mobile.jpg")
+      background: url("https://diedieve.sirv.com/Images/background-technology-mobile.jpg")
         no-repeat center center fixed;
       .technology-wrapper {
         .technology-heading {
           width: 100%;
           justify-content: center;
           align-items: center;
+          margin: 0;
           & > h5 {
             font-size: 16px;
           }
@@ -290,7 +313,7 @@ const currentTechnology = ref<"launchVehicle" | "spacePort" | "spaceCapsule">(
           .left-side {
             .nav-text {
               font-size: 14px;
-              margin-bottom: 1rem;
+              margin-bottom: 0.5rem;
             }
             .left-container {
               .slider {
@@ -305,6 +328,7 @@ const currentTechnology = ref<"launchVehicle" | "spacePort" | "spaceCapsule">(
             }
             .body-text {
               font-size: 15px;
+              line-height: 25px;
             }
           }
         }

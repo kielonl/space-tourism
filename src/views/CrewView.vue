@@ -55,40 +55,44 @@ interface Crew {
   };
 }
 
+type CrewMember =
+  | "douglasHurley"
+  | "markShuttleworth"
+  | "victorGlover"
+  | "anoushehAnsari";
+
 const crewInfo: Crew = {
   douglasHurley: {
     name: "Douglas Hurley",
     title: "COMMANDER",
-    image: "src/assets/crew/image-douglas-hurley.png",
+    image: "https://diedieve.sirv.com/Images/image-douglas-hurley.png",
     bodyText:
       "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.",
   },
   markShuttleworth: {
     name: "Mark Shuttleworth",
     title: "MISSION SPECIALIST",
-    image: "src/assets/crew/image-mark-shuttleworth.png",
+    image: "https://diedieve.sirv.com/Images/image-mark-shuttleworth.png",
     bodyText:
       "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.",
   },
   victorGlover: {
     name: "Victor Glover",
     title: "PILOT",
-    image: "src/assets/crew/image-victor-glover.png",
+    image: "https://diedieve.sirv.com/Images/image-victor-glover.png",
     bodyText:
       "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer. ",
   },
   anoushehAnsari: {
     name: "Anousheh Ansari",
     title: "FLIGHT ENGINEER",
-    image: "src/assets/crew/image-anousheh-ansari.png",
+    image: "https://diedieve.sirv.com/Images/image-anousheh-ansari.png",
     bodyText:
       "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space. ",
   },
 };
 
-const currentCrew = ref<
-  "douglasHurley" | "markShuttleworth" | "victorGlover" | "anoushehAnsari"
->("douglasHurley");
+const currentCrew = ref<CrewMember>("douglasHurley");
 </script>
 
 <style scoped lang="scss">
@@ -113,15 +117,17 @@ input[type="radio"] {
 }
 
 .slider {
+  position: relative;
+  top: 5rem;
   display: flex;
   flex-direction: row;
   align-self: end;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 #crew {
-  background: url("src/assets/crew/background-crew-desktop.jpg") no-repeat
-    center center fixed;
+  background: url("https://diedieve.sirv.com/Images/background-crew-desktop.jpg")
+    no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   overflow: hidden;
@@ -190,12 +196,13 @@ input[type="radio"] {
 
 @media (max-width: 768px) {
   .slider {
+    position: relative;
+    top: 1rem;
     justify-content: center;
-    margin-top: 2rem;
   }
   #crew {
-    background: url("src/assets/crew/background-crew-tablet.jpg") no-repeat
-      center center fixed;
+    background: url("https://diedieve.sirv.com/Images/background-crew-tablet.jpg")
+      no-repeat center center fixed;
     .crew-wrapper {
       .crew-heading {
         margin: 0 -3rem;
@@ -227,8 +234,8 @@ input[type="radio"] {
 
 @media (max-width: 375px) {
   #crew {
-    background: url("src/assets/crew/background-crew-mobile.jpg") no-repeat
-      center center fixed;
+    background: url("https://diedieve.sirv.com/Images/background-crew-mobile.jpg")
+      no-repeat center center fixed;
     .crew-wrapper {
       .crew-heading--mobile {
         width: 100%;

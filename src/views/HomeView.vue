@@ -26,8 +26,8 @@ import HeaderMenu from "@/components/HeaderMenu.vue";
 
 <style scoped lang="scss">
 #home {
-  background: url("../assets/home/background-home-desktop.jpg") no-repeat center
-    center fixed;
+  background: url("https://diedieve.sirv.com/Images/background-home-desktop.jpg")
+    no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
   overflow: hidden;
@@ -63,8 +63,8 @@ import HeaderMenu from "@/components/HeaderMenu.vue";
 
 @media (max-width: 768px) {
   #home {
-    background: url("../assets/home/background-home-tablet.jpg") no-repeat
-      center center fixed;
+    background: url("https://diedieve.sirv.com/Images/background-home-tablet.jpg")
+      no-repeat center center fixed;
 
     .desktop-body-wrapper {
       display: flex;
@@ -79,21 +79,22 @@ import HeaderMenu from "@/components/HeaderMenu.vue";
       .body-text {
         padding: 0 4rem;
       }
-
-      .desktop-body-button-wrapper {
-        button {
-          left: 0;
-          top: 0;
-        }
-      }
     }
   }
 }
 
 @media (max-width: 375px) {
   #home {
-    background: url("../assets/home/background-home-mobile.jpg") no-repeat
-      center center fixed;
+    background: url("https://diedieve.sirv.com/Images/background-home-mobile.jpg")
+      no-repeat center center fixed;
+    .desktop-body-wrapper {
+      .body-text {
+        padding: 0 2rem;
+      }
+      h1 {
+        font-size: 100px;
+      }
+    }
   }
 }
 </style>
