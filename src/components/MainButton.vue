@@ -21,4 +21,10 @@ button {
     color: #0b0d17;
   }
 }
+@media (max-width: 375px) {
+  button {
+    margin: 1rem;
+    padding: 2rem 2rem;
+  }
+}
 </style>
